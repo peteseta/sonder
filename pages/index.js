@@ -1,6 +1,5 @@
 // local components
 import Loader from '../components/Loader';
-import ThoughtFeed from '../components/ThoughtFeed';
 
 // package components
 import toast from 'react-hot-toast'
