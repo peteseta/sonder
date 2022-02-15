@@ -1,6 +1,9 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
+import toast from 'react-hot-toast'
 
 function Input() {
+
+    // input handler
     const [input, setInput] = useState("");
 
     // handles submission of scream
@@ -21,11 +24,41 @@ function Input() {
             },
             method: 'POST'
         })
+
+        // clear text inputarea
+        setInput("");
+    }
+
+    const toastPromise = () => {
+
+        // prevent default behavior of browser refresh on submit
+        event.preventDefault()
+
+        // temp postScream call
+        const toastScream = postScream();
+
+        // call and toast depending on promise
+        toast.promise(
+            toastScream,
+            {
+                loading: "posting thought...",
+                error: "something went wrong.",
+                success: "thought posted. get it off your mind."
+            },
+            {
+                style: {
+                    minWidth: '280px',
+                },
+                success: {
+                    duration: 4000,
+                },
+            }
+        );
     }
 
     return (
         // using a form - button is type=submit so it calls postScream once clicked.
-        <form onSubmit={postScream}>
+        <form onSubmit={toastPromise}>
             <div className="bg-transparent px-12 flex-col space-y-2">
                 <div className="grow">
                     <textarea
@@ -55,8 +88,9 @@ function Input() {
                     get it off my mind.
                 </button >
             </div >
-        </form>
+        </form >
     )
+
 }
 
 export default Input;
