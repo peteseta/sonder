@@ -1,50 +1,61 @@
-import { useState } from "react";
-import { postScream } from "../redux/actions/dataActions";
+import { useState, useRef } from "react";
 
 function Input() {
     const [input, setInput] = useState("");
 
     // handles submission of scream
     const postScream = async () => {
-        const response = await fetch('/scream', {
-            method: 'POST',
-            body: JSON.stringify({ input }),
+
+        // prevent default behavior of browser refresh on submit
+        event.preventDefault()
+
+        // post req to API
+        const response = await fetch('https://asia-southeast1-sonder-e7919.cloudfunctions.net/api/scream', {
+            body: JSON.stringify({
+                body: event.target.input.value
+            }),
             headers: {
-                'Content-Type': 'application/json'
-            }
+                'Content-Type': 'application/json',
+                'Content-Length': JSON.stringify({ input }),
+                'Access-Control-Allow-Origin': '*',
+            },
+            method: 'POST'
         })
-        const res = await response.json()
-        console.log(res)
     }
 
     return (
-        <div className="bg-transparent px-12 flex-col space-y-2">
-            <div className="grow">
-                <textarea
-                    type='text'
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    rows="5"
-                    placeholder="write something..."
-                    className="z-10 grow px-4 py-2 rounded-lg bg-transparent border-2 
+        // using a form - button is type=submit so it calls postScream once clicked.
+        <form onSubmit={postScream}>
+            <div className="bg-transparent px-12 flex-col space-y-2">
+                <div className="grow">
+                    <textarea
+                        type='text'
+                        id='input'
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
+                        rows="5"
+                        placeholder="write something..."
+                        className="z-10 grow px-4 py-2 rounded-lg bg-transparent border-2 
                         bg-black border-neutral-900 outline-none text-white text-xl antialiased 
                         placeholder-neutral-500
                         w-full min-h-[50px]
                         overflow-auto"
-                />
-            </div>
-            <button
-                className="z-0 flex-none rounded-lg px-4 py-2 
+                    />
+                </div>
+                <button
+                    type='submit'
+                    value='submit'
+                    className="z-0 flex-none rounded-lg px-4 py-2 
                 bg-transparent border-2 border-neutral-900 text-neutral-100 text-xl bold antialiased 
                 disabled:opacity-50 disabled:hover:scale-100 disabled:shadow-none
                 delay-100 ease-in-out hover:scale-105 duration-300 active:underline
                 hover:shadow-[0_0px_25px_0px_rgba(255,255,255,0.2)]"
-                disabled={!input.trim()}
-                onClick={postScream}
-            >
-                get it off my mind.
-            </button >
-        </div >
+                    disabled={!input.trim()}
+                >
+                    get it off my mind.
+                </button >
+            </div >
+        </form>
     )
 }
 

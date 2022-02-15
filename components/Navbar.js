@@ -3,8 +3,8 @@
 export default function Navbar() {
 
     return (
-        <nav className="bg-black px-14 pt-12 pb-20">
-            <div className="inline-flex flex-col space-y-12 items-start justify-start pr-14 pb-14" style={{ width: 405, height: 86, }}>
+        <div className="bg-black px-14 pt-12 pb-20">
+            <div className="bg-black inline-flex flex-col space-y-12" style={{ width: 405, height: 86, }}>
                 <p className="w-2/3 h-10 text-8xl font-bold text-white antialiased">sonder.</p>
                 <div className="inline-flex space-x-4 items-start justify-start" style={{ width: 405, height: 31, }}>
                     <a href='/'>
@@ -18,6 +18,6 @@ export default function Navbar() {
                     </a>
                 </div>
             </div>
-        </nav>
+        </div>
     )
 }
