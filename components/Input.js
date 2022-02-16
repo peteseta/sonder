@@ -58,10 +58,22 @@ function Input() {
     );
   };
 
+  // validate input length to be below 1000 characters and post scream
+  const handleSubmit = (event) => {
+    // prevent default behavior of browser refresh on submit
+    event.preventDefault();
+
+    if (input.length > 5000) {
+      toast.error("thought too long: 5000 character limit.");
+    } else {
+      toastPromise();
+    }
+  };
+
   return (
     // using a form - button is type=submit so it calls postScream once clicked.
-    <form onSubmit={toastPromise}>
-      <div className="bg-transparent px-12 flex-col space-y-2">
+    <form onSubmit={handleSubmit}>
+      <div className="flex-col px-12 space-y-2 bg-transparent">
         <div className="grow">
           <textarea
             type="text"
