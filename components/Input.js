@@ -29,6 +29,7 @@ function Input() {
         setInput("");
     }
 
+    // call this for promise toast - loading --> success OR error
     const toastPromise = () => {
 
         // prevent default behavior of browser refresh on submit
