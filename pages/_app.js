@@ -1,10 +1,18 @@
 import '../styles/globals.css'
 import Navbar from '../components/Navbar'
 import { Toaster } from 'react-hot-toast'
+import Head from 'next/head'
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
+
+      <Head>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&display=swap');
+        </style>
+      </Head>
+
       <Toaster
         position='top-right'
         reverseOrder={false}
@@ -40,7 +48,6 @@ function MyApp({ Component, pageProps }) {
           right: 45,
         }}
       />
-      <Navbar />
       <Component {...pageProps} />
     </>
 
