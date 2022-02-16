@@ -40,20 +40,18 @@ export default function Feed() {
   }, []);
 
   return (
-    <div className="px-14 py-6 space-y-2">
-      <div className="block px-4 py-4 border-l-8 border-2 border-neutral-800 bg-neutral-900 rounded-lg text-neutral-100 text-xl">
-        <blockquote>
-          <p id="thought"></p>
-        </blockquote>
+    <div className="py-6 space-y-2 px-14">
+      <div className="relative group">
+        <div className="relative px-4 py-4 text-xl border-2 rounded-lg max-w-screen border-neutral-900 text-neutral-100">
+          <blockquote>
+            <p id="thought" class="transition-all opacity-100"></p>
+          </blockquote>
+        </div>
       </div>
 
       <button
         onClick={getRandomScream}
-        className="z -0 flex-none rounded-lg px-4 py-2 
-                bg-transparent border-2 border-neutral-900 text-neutral-100 text-xl bold antialiased 
-                disabled:opacity-50 disabled:hover:scale-100 disabled:shadow-none
-                delay-100 ease-in-out hover:scale-105 duration-300 active:underline
-                hover:shadow-[0_0px_25px_0px_rgba(255,255,255,0.2)]"
+        className="z-0 flex-none rounded-lg px-4 py-2 border-2 border-neutral-900 text-neutral-100 text-xl bold antialiased disabled:opacity-50 disabled:hover:scale-100 bg-transparent disabled:shadow-none delay-100 ease-in-out hover:scale-105 duration-300 active:underline hover:shadow-[0_0px_25px_0px_rgba(255,255,255,0.2)]"
       >
         load screams
       </button>
