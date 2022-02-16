@@ -82,8 +82,8 @@ function Input() {
             onChange={(e) => setInput(e.target.value)}
             rows="5"
             placeholder="write something..."
-            className="z-10 grow px-4 py-2 rounded-lg bg-transparent border-2 
-                        bg-black border-neutral-900 outline-none text-white text-xl antialiased 
+            className="z-10 grow px-5 py-4 rounded-lg bg-transparent border-2 
+                        bg-black border-neutral-900 outline-none text-white text-2xl antialiased 
                         placeholder-neutral-500
                         w-full min-h-[50px]
                         overflow-auto"
