@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
               secondary: "#f5f5f5",
             },
           },
-          erropr: {
+          error: {
             iconTheme: {
               primary: "#171717",
               secondary: "#f5f5f5",

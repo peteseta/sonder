@@ -19,7 +19,7 @@ export default function Navbar() {
           </a>
           <a href="/thoughts">
             <button className="h-full text-4xl text-neutral-200 transition ease-in-out hover:scale-105 hover:text-white duration-300 antialiased">
-              thoughts
+              read
             </button>
           </a>
           <a href="/about">
