@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <nav className="pt-10 pb-16 bg-black px-14">
+    <nav className="pt-10 pb-16 bg-black  px-14">
       <div
         className="inline-flex flex-col items-start justify-start space-y-12 pr-14 pb-14"
         style={{ width: 405, height: 86 }}
