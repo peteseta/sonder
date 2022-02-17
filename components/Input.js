@@ -92,7 +92,7 @@ function Input() {
         <button
           type="submit"
           value="submit"
-          className="z-0 flex-none rounded-lg px-4 py-2 
+          className="min-w-fit z-0 flex-none rounded-lg px-4 py-3 
                 bg-transparent border-2 border-neutral-900 text-neutral-100 text-xl bold antialiased 
                 disabled:opacity-50 disabled:hover:scale-100 disabled:shadow-none
                 delay-100 ease-in-out hover:scale-105 duration-300 active:underline
