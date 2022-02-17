@@ -9,6 +9,7 @@ export default function Feed() {
 
   // init random scream picker thing
   let currentScreamBody = "";
+  let currentScreamTimestamp = "";
   let currentScreamIndex = 0;
 
   // fisher-yates array shuffle
@@ -35,7 +36,9 @@ export default function Feed() {
   // update scream body in the renderer by index
   function updateScreamBody(index) {
     currentScreamBody = screams[index].body;
+    currentScreamTimestamp = parseISODate(screams[index].createdAt);
     document.getElementById("thought").innerHTML = currentScreamBody;
+    document.getElementById("timestamp").innerHTML = currentScreamTimestamp;
   }
 
   // up index and update scream body
@@ -60,6 +63,12 @@ export default function Feed() {
     }
   }
 
+  function parseISODate(s) {
+    var b = s.split(/\D+/);
+    const d = new Date(Date.UTC(b[0], --b[1], b[2], b[3], b[4], b[5], b[6]));
+    return d.toLocaleString();
+  }
+
   // on page load, API get request to get screams + sets a random scream for feed
   const fetchScream = async () => {
     const response = await fetch(
@@ -72,7 +81,9 @@ export default function Feed() {
     currentScreamIndex = (Math.random() * screams.length) >> 0;
     const firstLoadRandomScream = screams[currentScreamIndex];
     currentScreamBody = firstLoadRandomScream.body;
+    currentScreamTimestamp = parseISODate(firstLoadRandomScream.createdAt);
     document.getElementById("thought").innerHTML = currentScreamBody;
+    document.getElementById("timestamp").innerHTML = currentScreamTimestamp;
   };
 
   // call this for promise toast - loading --> success OR error
@@ -125,13 +136,11 @@ export default function Feed() {
         </svg>
       </button>
 
-      <div
-        id="thoughtBlock"
-        className="basis-[95%] sm:basis-[90%] p-4 border-2 rounded-lg border-neutral-900 text-neutral-100"
-      >
+      <div className="basis-[95%] sm:basis-[90%] p-4 border-2 rounded-lg border-neutral-900 text-neutral-100">
+        <div id="timestamp" className="pb-1 text-sm text-neutral-500"></div>
         <div
           id="thought"
-          className="leading-6 break-words sm:leading-normal sm:text-2xl "
+          className="leading-6 break-words sm:leading-normal sm:text-2xl"
         ></div>
       </div>
 
