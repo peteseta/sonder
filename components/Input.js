@@ -48,8 +48,8 @@ function Input() {
       },
       {
         style: {
-          minWidth: "280px",
-          maxHeight: "50px",
+          minWidth: "360px",
+          maxHeight: "40px",
         },
         success: {
           duration: 4000,
@@ -73,7 +73,7 @@ function Input() {
   return (
     // using a form - button is type=submit so it calls postScream once clicked.
     <form onSubmit={handleSubmit}>
-      <div className="flex-col px-12 space-y-2 bg-transparent">
+      <div className="flex-col px-5 space-y-2 bg-transparent sm:px-14">
         <div className="grow">
           <textarea
             type="text"
@@ -83,7 +83,7 @@ function Input() {
             rows="5"
             placeholder="write something..."
             className="z-10 grow px-5 py-4 rounded-lg bg-transparent border-2 
-                        bg-black border-neutral-900 outline-none text-white text-2xl antialiased 
+                        bg-black border-neutral-900 outline-none text-white sm:text-2xl antialiased 
                         placeholder-neutral-500
                         w-full min-h-[50px]
                         overflow-auto"
@@ -92,10 +92,10 @@ function Input() {
         <button
           type="submit"
           value="submit"
-          className="min-w-fit z-0 flex-none rounded-lg px-4 py-3 
-                bg-transparent border-2 border-neutral-900 text-neutral-100 text-xl bold antialiased 
-                disabled:opacity-50 disabled:hover:scale-100 disabled:shadow-none
-                delay-100 ease-in-out hover:scale-105 duration-300 active:underline
+          className="min-w-fit flex-none rounded-lg px-4 py-3 
+                bg-transparent border-2 border-neutral-900 text-neutral-100 text-lg sm:text-xl bold antialiased shadow-[0_0px_25px_0px_rgba(255,255,255,0.1)]
+                disabled:opacity-50 disabled:hover:scale-100 disabled:shadow-none disabled:font-normal
+                sm:delay-100 ease-in-out hover:scale-105 duration-300 active:underline
                 hover:shadow-[0_0px_25px_0px_rgba(255,255,255,0.2)]"
           disabled={!input.trim()}
         >

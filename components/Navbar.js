@@ -1,17 +1,11 @@
 export default function Navbar() {
   return (
-    <nav className="pt-10 pb-16 bg-black  px-14">
-      <div
-        className="inline-flex flex-col items-start justify-start space-y-12 pr-14 pb-14"
-        style={{ width: 405, height: 86 }}
-      >
+    <nav className="px-6 pt-6 bg-black sm:px-14 sm:pt-10">
+      <div className="inline-flex flex-col items-start justify-start pb-6 space-y-12 sm:pb-10">
         <p className="w-2/3 h-10 antialiased font-bold text-white text-8xl">
           sonder.
         </p>
-        <div
-          className="inline-flex items-start justify-start space-x-4"
-          style={{ width: 405, height: 31 }}
-        >
+        <div className="inline-flex items-start justify-start space-x-4">
           <a href="/">
             <button className="h-full text-4xl antialiased transition duration-300 ease-in-out text-neutral-200 hover:scale-105 hover:text-white">
               write
