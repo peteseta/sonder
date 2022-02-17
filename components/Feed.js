@@ -118,7 +118,7 @@ export default function Feed() {
       <button
         id="btnPrevious"
         onClick={previousScream}
-        className="sticky top-6 max-h-11 basis-[2.5%] sm:basis-[5%] p-2 border-2 rounded-lg border-neutral-900 opacity-75 hover:opacity-100 hover:shadow-[0_0px_25px_0px_rgba(255,255,255,0.2)] sm:delay-100 duration-300 hover:scale-105"
+        className="sticky top-6 max-h-11 basis-[2.5%] sm:basis-[5%] p-2 border-2 rounded-lg border-neutral-900 opacity-75 hover:opacity-100 sm:hover:shadow-[0_0px_25px_0px_rgba(255,255,255,0.2)] sm:delay-100 duration-300 hover:scale-105"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -147,7 +147,7 @@ export default function Feed() {
       <button
         id="btnNext"
         onClick={nextScream}
-        className="sticky top-6 max-h-11 basis-[2.5%] sm:basis-[5%] p-2 border-2 rounded-lg border-neutral-900 opacity-75 hover:opacity-100 hover:shadow-[0_0px_25px_0px_rgba(255,255,255,0.2)] sm:delay-100 duration-300 hover:scale-105"
+        className="sticky top-6 max-h-11 basis-[2.5%] sm:basis-[5%] p-2 border-2 rounded-lg border-neutral-900 opacity-75 hover:opacity-100 sm:hover:shadow-[0_0px_25px_0px_rgba(255,255,255,0.2)] sm:delay-100 duration-300 hover:scale-105"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
