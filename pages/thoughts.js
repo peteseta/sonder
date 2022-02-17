@@ -1,15 +1,27 @@
+import { AnimatePresence, m, LazyMotion, domAnimation } from "framer-motion";
+
 // local components
 import Navbar from "../components/Navbar";
 import Feed from "../components/Feed";
 
 export default function thoughts() {
   return (
-    <div className="flex-row min-h-screen bg-black min-w-min">
+    <div className="min-h-screen bg-black">
       <Navbar />
-      <Feed />
+      <AnimatePresence>
+        <LazyMotion features={domAnimation}>
+          <m.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Feed />
+          </m.div>
+        </LazyMotion>
+      </AnimatePresence>
     </div>
   );
 }
 
-// classname for feed | flex-auto sm:min-w-full sm:max-w-full bg-neutral-100
-// classname ofr navbar | flex-none h-4 min-h-fit
+// classname flex-row min-h-screen bg-black min-w-min
