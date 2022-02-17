@@ -137,7 +137,10 @@ export default function Feed() {
       </button>
 
       <div className="basis-[95%] sm:basis-[90%] p-4 border-2 rounded-lg border-neutral-900 text-neutral-100">
-        <div id="timestamp" className="pb-1 text-sm text-neutral-500"></div>
+        <div
+          id="timestamp"
+          className="pb-1 text-sm sm:text-lg text-neutral-500"
+        ></div>
         <div
           id="thought"
           className="leading-6 break-words sm:leading-normal sm:text-2xl"
