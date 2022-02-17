@@ -66,7 +66,7 @@ export default function Feed() {
   function parseISODate(s) {
     var b = s.split(/\D+/);
     const d = new Date(Date.UTC(b[0], --b[1], b[2], b[3], b[4], b[5], b[6]));
-    return d.toLocaleString();
+    return d.toLocaleDateString();
   }
 
   // on page load, API get request to get screams + sets a random scream for feed

@@ -44,15 +44,15 @@ function Input() {
       {
         loading: "posting thought...",
         error: "something went wrong.",
-        success: "thought posted. get it off your mind.",
+        success: "thought posted.",
       },
       {
         style: {
-          minWidth: "360px",
+          minWidth: "120px",
           maxHeight: "40px",
         },
         success: {
-          duration: 4000,
+          duration: 2000,
         },
       }
     );
