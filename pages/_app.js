@@ -1,7 +1,7 @@
 import "../styles/globals.css";
+import Head from "next/head";
 import { useEffect, useState, useCallback } from "react";
 import { Toaster } from "react-hot-toast";
-import Head from "next/head";
 import { AnimatePresence } from "framer-motion";
 
 function MyApp({ Component, pageProps }) {
@@ -31,12 +31,23 @@ function MyApp({ Component, pageProps }) {
   const paddingRight = small ? 0 : 50;
   const paddingLeft = small ? 0 : 0;
 
+  // framer motion SSR fix
+  const [isLoaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
+
+  if (!isLoaded) {
+    return <></>;
+  }
+
   return (
     <>
       <Head>
         <style>
           @import
-          url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Poppins:wght@700&display=swap');
+          url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
         </style>
       </Head>
 
