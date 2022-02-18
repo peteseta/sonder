@@ -1,9 +1,20 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      sans: [
+        '"ui-sans-serif"',
+        '"-apple-system"',
+        '"BlinkMacSystemFont"',
+        '"Poppins"',
+        ...defaultTheme.fontFamily.sans,
+      ],
+    },
     extend: {
       boxShadow: {
         xl_white:
