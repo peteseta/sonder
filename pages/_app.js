@@ -4,6 +4,9 @@ import { useEffect, useState, useCallback } from "react";
 import { Toaster } from "react-hot-toast";
 import { AnimatePresence } from "framer-motion";
 
+// local components
+import Heading from "../components/Heading";
+
 function MyApp({ Component, pageProps }) {
   // checks for window width and sets state accordingly for toast position
   const [small, setSmall] = useState(false);
@@ -15,7 +18,6 @@ function MyApp({ Component, pageProps }) {
       setSmall(false);
     }
   }, []);
-
   useEffect(() => {
     const media = window.matchMedia(`(max-width: 640px)`);
     media.addEventListener("change", (e) => updateTarget(e));
@@ -27,17 +29,14 @@ function MyApp({ Component, pageProps }) {
 
     return () => media.removeEventListener("change", (e) => updateTarget(e));
   }, []);
-
   const paddingRight = small ? 0 : 50;
   const paddingLeft = small ? 0 : 0;
 
   // framer motion SSR fix
   const [isLoaded, setLoaded] = useState(false);
-
   useEffect(() => {
     setLoaded(true);
   }, []);
-
   if (!isLoaded) {
     return <></>;
   }
@@ -88,7 +87,7 @@ function MyApp({ Component, pageProps }) {
           left: paddingLeft,
         }}
       />
-
+      <Heading />
       <AnimatePresence exitBeforeEnter>
         <Component {...pageProps} />
       </AnimatePresence>

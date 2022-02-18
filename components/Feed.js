@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
-import { AnimatePresence, m, LazyMotion, domAnimation } from "framer-motion";
+import { m, LazyMotion, domAnimation } from "framer-motion";
 
 export default function Feed() {
-  //TODO find a way to fetch only some of the screams - as the db gets bigger this will make it impossible to load all the screams
-
   // init thoughts - initialState is an empty array
   const [screams, setScreams] = useState([]);
 
