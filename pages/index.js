@@ -1,4 +1,4 @@
-import { AnimatePresence, LazyMotion, domAnimation, m } from "framer-motion";
+import { LazyMotion, domAnimation, m } from "framer-motion";
 
 // local components
 import Input from "../components/Input";
