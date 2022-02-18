@@ -38,3 +38,6 @@ yarn-error.log*
 .trunk/.gitignore
 .trunk/trunk.yaml
 .markdownlint.yaml
+
+#ide
+.vscode
