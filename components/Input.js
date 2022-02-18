@@ -15,7 +15,7 @@ function Input() {
       "https://asia-southeast1-sonder-e7919.cloudfunctions.net/api/scream",
       {
         body: JSON.stringify({
-          body: event.target.input.value,
+          body: input,
         }),
         headers: {
           "Content-Type": "application/json",
@@ -35,12 +35,9 @@ function Input() {
     // prevent default behavior of browser refresh on submit
     event.preventDefault();
 
-    // temp postScream call
-    const toastScream = postScream();
-
     // call and toast depending on promise
     toast.promise(
-      toastScream,
+      postScream(),
       {
         loading: "posting thought...",
         error: "something went wrong.",
@@ -58,13 +55,17 @@ function Input() {
     );
   };
 
-  // validate input length to be below 1000 characters and post scream
+  // validate input length and handle newlines
   const handleSubmit = (event) => {
     // prevent default behavior of browser refresh on submit
     event.preventDefault();
+    const newlines = input.match(/\n/g);
+    console.log(newlines);
 
     if (input.length > 5000) {
       toast.error("thought too long: 5000 character limit.");
+    } else if (newlines.length > 10) {
+      toast.error("too many lines.");
     } else {
       toastPromise();
     }
@@ -82,21 +83,13 @@ function Input() {
             onChange={(e) => setInput(e.target.value)}
             rows="5"
             placeholder="write something..."
-            className="z-10 grow px-5 py-4 rounded-lg bg-transparent border-2 
-                        bg-black border-neutral-900 outline-none text-white sm:text-2xl antialiased 
-                        placeholder-neutral-500
-                        w-full min-h-[50px]
-                        overflow-auto"
+            className="z-10 grow px-5 py-4 rounded-lg bg-transparent border-2 bg-black border-neutral-900 outline-none text-white sm:text-2xl antialiased placeholder-neutral-500 w-full min-h-[50px] overflow-auto"
           />
         </div>
         <button
           type="submit"
           value="submit"
-          className="min-w-fit flex-none rounded-lg px-4 py-3 
-                bg-transparent border-2 border-neutral-900 text-neutral-100 text-lg sm:text-xl bold antialiased shadow-[0_0px_25px_0px_rgba(255,255,255,0.1)]
-                disabled:opacity-50 disabled:hover:scale-100 disabled:shadow-none disabled:font-normal
-                sm:delay-100 ease-in-out hover:scale-105 duration-300 active:underline
-                hover:shadow-[0_0px_25px_0px_rgba(255,255,255,0.2)]"
+          className="min-w-fit flex-none rounded-lg px-4 py-3 bg-transparent border-2 border-neutral-900 text-neutral-100 text-lg sm:text-xl bold antialiased shadow-[0_0px_25px_0px_rgba(255,255,255,0.1)] disabled:opacity-50 disabled:hover:scale-100 disabled:shadow-none disabled:font-normal sm:delay-100 ease-in-out hover:scale-105 duration-300 active:underline hover:shadow-[0_0px_25px_0px_rgba(255,255,255,0.2)]"
           disabled={!input.trim()}
         >
           get it off my mind.
