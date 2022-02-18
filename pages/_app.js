@@ -1,8 +1,8 @@
 import "../styles/globals.css";
 import { useEffect, useState, useCallback } from "react";
 import { Toaster } from "react-hot-toast";
-import { useMediaQuery } from "../hooks/useMediaQuery";
 import Head from "next/head";
+import { AnimatePresence } from "framer-motion";
 
 function MyApp({ Component, pageProps }) {
   // checks for window width and sets state accordingly for toast position
@@ -36,7 +36,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <style>
           @import
-          url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&display=swap');
+          url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Poppins:wght@700&display=swap');
         </style>
       </Head>
 
@@ -77,7 +77,10 @@ function MyApp({ Component, pageProps }) {
           left: paddingLeft,
         }}
       />
-      <Component {...pageProps} />
+
+      <AnimatePresence exitBeforeEnter>
+        <Component {...pageProps} />
+      </AnimatePresence>
     </>
   );
 }
