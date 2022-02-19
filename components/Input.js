@@ -82,7 +82,7 @@ function Input() {
           onChange={(e) => setInput(e.target.value)}
           rows="5"
           placeholder="what's on your mind?"
-          className="px-4 py-3 rounded-lg bg-transparent border-2 bg-black border-neutral-900 outline-none text-white sm:text-2xl antialiased placeholder-neutral-500 w-full min-h-[50px] overflow-auto"
+          className="px-4 py-4 rounded-lg bg-transparent border-2 bg-black border-neutral-900 outline-none text-white sm:text-2xl antialiased placeholder-neutral-500 w-full min-h-[50px] overflow-auto"
         />
 
         <button
