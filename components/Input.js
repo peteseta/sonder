@@ -60,11 +60,10 @@ function Input() {
     // prevent default behavior of browser refresh on submit
     event.preventDefault();
     const newlines = input.match(/\n/g);
-    console.log(newlines);
 
     if (input.length > 5000) {
       toast.error("thought too long: 5000 character limit.");
-    } else if (newlines.length > 10) {
+    } else if (newlines.length !== null && newlines.length > 10) {
       toast.error("too many lines.");
     } else {
       toastPromise();
