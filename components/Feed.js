@@ -135,7 +135,7 @@ export default function Feed() {
   });
 
   return (
-    <div className="flex flex-row max-w-lg px-4 pb-8 space-x-2 bg-black sm:px-14 sm:space-x-4 sm:min-w-full sm:max-w-fit">
+    <div className="flex flex-row max-w-lg px-4 pb-6 space-x-2 bg-black sm:px-14 sm:space-x-4 sm:min-w-full sm:max-w-fit">
       <button
         id="btnPrevious"
         onClick={previousScream}
