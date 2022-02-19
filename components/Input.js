@@ -59,12 +59,21 @@ function Input() {
   const handleSubmit = (event) => {
     // prevent default behavior of browser refresh on submit
     event.preventDefault();
-    const newlines = input.match(/\n/g);
+
+    const newlines = 0;
+    const newlinesExist = false;
+
+    if (input.match(/\n/g)) {
+      const newines = input.match(/\n/g);
+      const newlinesExist = true;
+    }
 
     if (input.length > 5000) {
       toast.error("thought too long: 5000 character limit.");
-    } else if (newlines.length !== null && newlines.length > 10) {
-      toast.error("too many lines.");
+    } else if (newlinesExist == true) {
+      if (newlines.length !== null && newlines.length > 10) {
+        toast.error("too many lines.");
+      }
     } else {
       toastPromise();
     }
