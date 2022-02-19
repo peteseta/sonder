@@ -6,11 +6,11 @@ import Navbar from "../components/Navbar";
 
 export default function Home(props) {
   return (
-    <div className="flex flex-col min-h-screen bg-black max-h-fit">
+    <div className="flex flex-col min-h-screen bg-stone-100 max-h-fit">
       <div>
         <Navbar />
       </div>
-      <div className="flex-1 pt-4 sm:pt-10">
+      <div className="flex-1 pt-6 sm:pt-10">
         <LazyMotion features={domAnimation}>
           <m.div
             initial={{ opacity: 0 }}

@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar";
 
 export default function thoughts() {
   return (
-    <div className="flex flex-col min-h-screen pb-4 bg-black max-h-fit">
+    <div className="flex flex-col min-h-screen pb-4 bg-stone-100 max-h-fit">
       <div>
         <Navbar />
       </div>

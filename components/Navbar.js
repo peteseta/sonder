@@ -5,8 +5,8 @@ export default function Navbar() {
   const router = useRouter();
 
   return (
-    <nav className="px-6 pt-6 -space-y-2 bg-black sm:px-14 sm:pt-10">
-      <div className="text-6xl antialiased font-bold text-white sm:text-8xl">
+    <nav className="px-6 pt-6 pb-4 -space-y-2 bg-white sm:px-14 sm:pb-10 sm:pt-6">
+      <div className="text-6xl antialiased font-bold text-black sm:text-8xl">
         {/* <TypeIt
           options={{
             strings: ["sonder."],
@@ -16,13 +16,13 @@ export default function Navbar() {
         ></TypeIt> */}
         sonder.
       </div>
-      <div className="justify-start space-x-4">
+      <div className="justify-start space-x-4 text-stone-800">
         <Link href="/">
           <button
             className={
               router.pathname == "/"
-                ? "h-full text-4xl sm:underline decoration-[6px] decoration-neutral-900 underline-offset-[6px] antialiased transition duration-300 ease-in-out text-neutral-200 hover:scale-105 hover:text-white"
-                : "h-full text-4xl no-underline decoration-neutral-900 antialiased transition duration-300 ease-in-out text-neutral-200 hover:scale-105 hover:text-white"
+                ? "h-full text-4xl underline decoration-[6px] decoration-stone-100 underline-offset-[3px] antialiased transition duration-300 ease-in-out hover:scale-105 hover:text-black"
+                : "h-full text-4xl no-underline decoration-white antialiased transition duration-300 ease-in-out hover:scale-105 hover:text-black"
             }
           >
             write
@@ -32,8 +32,8 @@ export default function Navbar() {
           <button
             className={
               router.pathname == "/thoughts"
-                ? "h-full text-4xl sm:underline decoration-[6px] decoration-neutral-900 underline-offset-[6px] antialiased transition duration-300 ease-in-out text-neutral-200 hover:scale-105 hover:text-white"
-                : "h-full text-4xl no-underline decoration-neutral-900 antialiased transition duration-300 ease-in-out text-neutral-200 hover:scale-105 hover:text-white"
+                ? "h-full text-4xl underline decoration-[6px] decoration-stone-100 underline-offset-[3px] antialiased transition duration-300 ease-in-out hover:scale-105 hover:text-black"
+                : "h-full text-4xl no-underline decoration-white antialiased transition duration-300 ease-in-out hover:scale-105 hover:text-black"
             }
           >
             read
@@ -43,8 +43,8 @@ export default function Navbar() {
           <button
             className={
               router.pathname == "/about"
-                ? "h-full text-4xl sm:underline decoration-[6px] decoration-neutral-900 underline-offset-[6px] antialiased transition duration-300 ease-in-out text-neutral-200 hover:scale-105 hover:text-white"
-                : "h-full text-4xl no-underline decoration-neutral-900 antialiased transition duration-300 ease-in-out text-neutral-200 hover:scale-105 hover:text-white"
+                ? "h-full text-4xl underline decoration-[6px] decoration-stone-100 underline-offset-[3px] antialiased transition duration-300 ease-in-out hover:scale-105 hover:text-black"
+                : "h-full text-4xl no-underline decoration-white antialiased transition duration-300 ease-in-out hover:scale-105 hover:text-black"
             }
           >
             about

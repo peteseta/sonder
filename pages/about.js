@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar";
 
 export default function about() {
   return (
-    <div className="flex flex-col min-h-screen pb-6 bg-black max-h-fit">
+    <div className="flex flex-col min-h-screen pb-6 bg-stone-100 max-h-fit">
       <div>
         <Navbar />
       </div>
@@ -20,7 +20,7 @@ export default function about() {
             className="flex flex-col pt-4 space-y-2 sm:pt-10"
           >
             <div className="flex-col px-6 space-y-2 sm:px-12">
-              <div className="p-4 text-sm border-2 rounded-lg bg-neutral-900 border-neutral-800 sm:text-xl text-neutral-100">
+              <div className="p-4 text-sm border-2 rounded-lg bg-stone-200 border-stone-300 sm:text-xl text-stone-800">
                 <div className="font-bold">/ˈsɑndɚ/ • noun.</div>
                 <div>
                   the realization that each random passerby is living a life as
@@ -29,14 +29,14 @@ export default function about() {
               </div>
 
               <div class="px-1 relative flex py-2 items-center">
-                <div class="flex-grow border-t border-neutral-900"></div>
+                <div class="flex-grow border-t border-stone-200"></div>
               </div>
 
-              <div className="p-4 text-sm border-2 rounded-lg border-neutral-900 text-neutral-100 sm:text-xl">
-                <div className="text-xl font-bold sm:text-2xl text-neutral-100">
+              <div className="p-4 text-sm border-2 rounded-lg border-stone-300 text-stone-900 sm:text-xl">
+                <div className="text-xl font-bold sm:text-2xl text-stone-900">
                   important:
                 </div>
-                <div className="font-bold text-neutral-100">
+                <div className="font-bold text-stone-900">
                   sonder is not a replacement for professional/qualified advice,
                   diagnosis, counselling, treatment or therapy.
                 </div>
@@ -51,7 +51,7 @@ export default function about() {
                   or a crisis, please reach out immediately:&nbsp;
                   <a
                     href="https://www.opencounseling.com/suicide-hotlines"
-                    className="underline text-neutral-200 hover:text-neutral-100"
+                    className="underline text-neutral-200 hover:text-stone-900"
                   >
                     view hotline information
                   </a>
@@ -65,19 +65,19 @@ export default function about() {
               </div>
 
               <div class="px-1 relative flex py-2 items-center">
-                <div class="flex-grow border-t border-neutral-900"></div>
+                <div class="flex-grow border-t border-stone-200"></div>
               </div>
 
               <div className="flex flex-col space-y-2">
                 <Disclosure>
                   {({ open }) => (
                     <>
-                      <div className="px-4 py-4 border-2 rounded-lg border-neutral-900">
+                      <div className="px-4 py-4 border-2 rounded-lg border-stone-300">
                         <Disclosure.Button
                           className={
                             open
-                              ? "justify-between flex w-full text-sm font-medium text-left text-neutral-100"
-                              : "justify-between flex w-full text-sm font-medium text-left text-neutral-100"
+                              ? "justify-between flex w-full text-sm font-medium text-left text-stone-900"
+                              : "justify-between flex w-full text-sm font-medium text-left text-stone-900"
                           }
                         >
                           <span className="text-xl font-bold sm:text-2xl">
@@ -87,8 +87,8 @@ export default function about() {
                             xmlns="http://www.w3.org/2000/svg"
                             className={
                               open
-                                ? "transform rotate-180 w-5 h-5 text-neutral-100 self-center"
-                                : "w-5 h-5 text-neutral-100 self-center"
+                                ? "transform rotate-180 w-5 h-5 text-stone-900 self-center"
+                                : "w-5 h-5 text-stone-900 self-center"
                             }
                             fill="none"
                             viewBox="0 0 24 24"
@@ -110,7 +110,7 @@ export default function about() {
                           leaveFrom="translate-y-0 opacity-100"
                           leaveTo="-translate-y-5 opacity-0"
                         >
-                          <Disclosure.Panel className="pt-2 text-sm sm:text-xl text-neutral-100 border-neutral-900">
+                          <Disclosure.Panel className="pt-2 text-sm sm:text-xl text-stone-900 border-stone-300">
                             sonder is an anonymous, safe, and inclusive place
                             for you to speak your mind.
                           </Disclosure.Panel>
@@ -122,12 +122,12 @@ export default function about() {
                 <Disclosure>
                   {({ open }) => (
                     <>
-                      <div className="px-4 py-4 border-2 rounded-lg border-neutral-900">
+                      <div className="px-4 py-4 border-2 rounded-lg border-stone-300">
                         <Disclosure.Button
                           className={
                             open
-                              ? "justify-between flex w-full text-sm font-medium text-left text-neutral-100"
-                              : "justify-between flex w-full text-sm font-medium text-left text-neutral-100"
+                              ? "justify-between flex w-full text-sm font-medium text-left text-stone-900"
+                              : "justify-between flex w-full text-sm font-medium text-left text-stone-900"
                           }
                         >
                           <span className="text-xl font-bold sm:text-2xl">
@@ -137,8 +137,8 @@ export default function about() {
                             xmlns="http://www.w3.org/2000/svg"
                             className={
                               open
-                                ? "transform rotate-180 w-5 h-5 text-neutral-100 self-center"
-                                : "w-5 h-5 text-neutral-100 self-center"
+                                ? "transform rotate-180 w-5 h-5 text-stone-900 self-center"
+                                : "w-5 h-5 text-stone-900 self-center"
                             }
                             fill="none"
                             viewBox="0 0 24 24"
@@ -160,7 +160,7 @@ export default function about() {
                           leaveFrom="translate-y-0 opacity-100"
                           leaveTo="-translate-y-5 opacity-0"
                         >
-                          <Disclosure.Panel className="pt-2 text-sm sm:text-xl text-neutral-100 border-neutral-900">
+                          <Disclosure.Panel className="pt-2 text-sm sm:text-xl text-stone-900 border-stone-300">
                             on sonder, you share thoughts— a few words, a
                             sentence or two, or when you need it, a few
                             paragraphs. it can be about anything; a part of your
@@ -175,12 +175,12 @@ export default function about() {
                 <Disclosure>
                   {({ open }) => (
                     <>
-                      <div className="px-4 py-4 border-2 rounded-lg border-neutral-900">
+                      <div className="px-4 py-4 border-2 rounded-lg border-stone-300">
                         <Disclosure.Button
                           className={
                             open
-                              ? "justify-between flex w-full text-sm font-medium text-left text-neutral-100"
-                              : "justify-between flex w-full text-sm font-medium text-left text-neutral-100"
+                              ? "justify-between flex w-full text-sm font-medium text-left text-stone-900"
+                              : "justify-between flex w-full text-sm font-medium text-left text-stone-900"
                           }
                         >
                           <span className="text-xl font-bold sm:text-2xl">
@@ -190,8 +190,8 @@ export default function about() {
                             xmlns="http://www.w3.org/2000/svg"
                             className={
                               open
-                                ? "transform rotate-180 w-5 h-5 text-neutral-100 self-center"
-                                : "w-5 h-5 text-neutral-100 self-center"
+                                ? "transform rotate-180 w-5 h-5 text-stone-900 self-center"
+                                : "w-5 h-5 text-stone-900 self-center"
                             }
                             fill="none"
                             viewBox="0 0 24 24"
@@ -213,7 +213,7 @@ export default function about() {
                           leaveFrom="translate-y-0 opacity-100"
                           leaveTo="-translate-y-5 opacity-0"
                         >
-                          <Disclosure.Panel className="pt-2 text-sm sm:text-xl text-neutral-100 border-neutral-900">
+                          <Disclosure.Panel className="pt-2 text-sm sm:text-xl text-stone-900 border-stone-300">
                             you don't have to login or register in any way to
                             use sonder. we don't know who you are, nor do we
                             collect or store that information.

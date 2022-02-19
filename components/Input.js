@@ -60,7 +60,6 @@ function Input() {
     // prevent default behavior of browser refresh on submit
     event.preventDefault();
     const newlines = input.match(/\n/g);
-    console.log(newlines);
 
     if (input.length > 5000) {
       toast.error("thought too long: 5000 character limit.");
@@ -74,7 +73,7 @@ function Input() {
   return (
     // using a form - button is type=submit so it calls postScream once clicked.
     <form onSubmit={handleSubmit}>
-      <div className="flex-col px-4 pb-6 space-y-2 min-w-fit sm:px-14">
+      <div className="flex-col px-6 pb-6 space-y-2 min-w-fit sm:px-14">
         <textarea
           type="text"
           id="input"
@@ -82,13 +81,13 @@ function Input() {
           onChange={(e) => setInput(e.target.value)}
           rows="5"
           placeholder="what's on your mind?"
-          className="px-4 py-4 rounded-lg bg-transparent border-2 bg-black border-neutral-900 outline-none text-white sm:text-2xl antialiased placeholder-neutral-500 w-full min-h-[50px] overflow-auto"
+          className="px-4 py-4 rounded-lg bg-transparent border-2 bg-black border-stone-300 outline-none text-stone-800 sm:text-2xl antialiased placeholder-stone-500 w-full min-h-[50px] overflow-auto"
         />
 
         <button
           type="submit"
           value="submit"
-          className="rounded-lg px-4 py-3 bg-transparent border-2 border-neutral-900 text-neutral-100 text-sm sm:text-xl font-bold antialiased shadow-[0_0px_25px_0px_rgba(255,255,255,0.1)] disabled:opacity-50 disabled:hover:scale-100 disabled:shadow-none disabled:font-normal sm:delay-100 ease-in-out hover:scale-105 duration-300 active:underline hover:shadow-[0_0px_25px_0px_rgba(255,255,255,0.2)]"
+          className="px-4 py-3 text-sm antialiased font-bold duration-300 ease-in-out bg-transparent border-2 rounded-lg shadow-sm border-stone-300 text-stone-800 sm:text-xl disabled:opacity-50 disabled:hover:scale-100 disabled:shadow-none disabled:font-normal sm:delay-100 hover:scale-105 active:underline hover:shadow-lg"
           disabled={!input.trim()}
         >
           get it off my mind.

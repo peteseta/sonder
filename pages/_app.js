@@ -58,27 +58,27 @@ function MyApp({ Component, pageProps }) {
         toastOptions={{
           className: "",
           style: {
-            border: "2px solid #171717",
-            background: "black",
+            border: "2px solid #d6d3d1",
+            background: "#f5f5f4",
             padding: "25px",
-            color: "#f5f5f5",
+            color: "#1c1917",
           },
           success: {
             iconTheme: {
-              primary: "#000000",
-              secondary: "#f5f5f5",
+              primary: "#a8a29e",
+              secondary: "#f5f5f4",
             },
           },
           error: {
             iconTheme: {
-              primary: "#000000",
-              secondary: "#f5f5f5",
+              primary: "#a8a29e",
+              secondary: "#f5f5f4",
             },
           },
           loading: {
             iconTheme: {
-              primary: "#000000",
-              secondary: "#f5f5f5",
+              primary: "#a8a29e",
+              secondary: "#f5f5f4",
             },
           },
         }}
