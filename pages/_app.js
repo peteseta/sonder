@@ -7,6 +7,10 @@ import { AnimatePresence } from "framer-motion";
 function MyApp({ Component, pageProps }) {
   // checks for window width and sets state accordingly for toast position
   const [small, setSmall] = useState(false);
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    screenWidth: undefined,
+  });
 
   const updateTarget = useCallback((e) => {
     if (e.matches) {
@@ -31,6 +35,24 @@ function MyApp({ Component, pageProps }) {
   // defining toast padding according to window width
   const paddingRight = small ? 0 : 50;
   const paddingLeft = small ? 0 : 0;
+
+  // instagram width fix
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Handler to call on window resize
+      function handleResize() {
+        // Set window width/height to state
+        setWindowSize({
+          width: window.innerWidth,
+          screenWidth: window.screen.width,
+        });
+      }
+    }
+
+    if (windowSize.width > windowSize.screenWidth) {
+      setSmall(true);
+    }
+  }, []);
 
   // on mount, framer motion SSR fix
   const [isLoaded, setLoaded] = useState(false);
@@ -58,27 +80,27 @@ function MyApp({ Component, pageProps }) {
         toastOptions={{
           className: "",
           style: {
-            border: "2px solid #171717",
-            background: "black",
+            border: "2px solid #d6d3d1",
+            background: "#f5f5f4",
             padding: "25px",
-            color: "#f5f5f5",
+            color: "#1c1917",
           },
           success: {
             iconTheme: {
-              primary: "#000000",
-              secondary: "#f5f5f5",
+              primary: "#a8a29e",
+              secondary: "#f5f5f4",
             },
           },
           error: {
             iconTheme: {
-              primary: "#000000",
-              secondary: "#f5f5f5",
+              primary: "#a8a29e",
+              secondary: "#f5f5f4",
             },
           },
           loading: {
             iconTheme: {
-              primary: "#000000",
-              secondary: "#f5f5f5",
+              primary: "#a8a29e",
+              secondary: "#f5f5f4",
             },
           },
         }}

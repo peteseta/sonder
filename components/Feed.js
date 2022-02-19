@@ -135,29 +135,28 @@ export default function Feed() {
   });
 
   return (
-    <div className="flex flex-row max-w-lg px-4 pb-6 space-x-2 bg-black sm:px-14 sm:space-x-4 sm:min-w-full sm:max-w-fit">
+    <div className="flex flex-row max-w-lg px-3 pb-6 space-x-2 sm:px-14 sm:space-x-4 sm:min-w-full sm:max-w-fit">
       <button
         id="btnPrevious"
         onClick={previousScream}
-        className="sticky top-6 max-h-11 sm:max-h-16 basis-[2.5%] sm:basis-[5%] p-2 sm:p-5 border-2 rounded-lg border-neutral-900 opacity-75 hover:opacity-100 sm:hover:shadow-[0_0px_25px_0px_rgba(255,255,255,0.1)] sm:delay-100 duration-300 hover:scale-105"
+        className="sticky top-6 max-h-11 sm:max-h-16 basis-[2.5%] sm:basis-[5%] p-2 sm:p-5 border-2 rounded-lg border-stone-300 opacity-75 hover:opacity-100 sm:hover:shadow-sm sm:delay-100 duration-300 hover:scale-105"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-4 h-4 sm:w-5 sm:h-5 stroke-neutral-100"
-          fill="none"
-          viewBox="0 0 24 24"
+          className="w-4 h-4 opacity-25 sm:w-5 sm:h-5 stroke-stone-300"
+          fill="currentColor"
+          viewBox="0 0 20 20"
           stroke="currentColor"
         >
           <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            fillRule="evenodd"
+            d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+            clipRule="evenodd"
           />
         </svg>
       </button>
 
-      <div className="basis-[95%] sm:basis-[90%] p-4 border-2 rounded-lg border-neutral-900 text-neutral-100">
+      <div className="basis-[95%] sm:basis-[90%] p-4 border-2 rounded-lg border-stone-300 text-stone-800">
         <LazyMotion features={domAnimation}>
           <m.div
             initial={{ opacity: 0 }}
@@ -167,7 +166,7 @@ export default function Feed() {
           >
             <div
               id="timestamp"
-              className="pb-1 text-sm sm:text-lg text-neutral-500"
+              className="pb-1 text-sm sm:text-lg text-stone-500"
             ></div>
             <div
               id="thought"
@@ -180,20 +179,19 @@ export default function Feed() {
       <button
         id="btnNext"
         onClick={nextScream}
-        className="sticky top-6 max-h-11 sm:max-h-16 basis-[2.5%] sm:basis-[5%] p-2 sm:p-5 border-2 rounded-lg border-neutral-900 opacity-75 hover:opacity-100 sm:hover:shadow-[0_0px_25px_0px_rgba(255,255,255,0.1)] sm:delay-100 duration-300 hover:scale-105"
+        className="sticky top-6 max-h-11 sm:max-h-16 basis-[2.5%] sm:basis-[5%] p-2 sm:p-5 border-2 rounded-lg border-stone-300 opacity-75 hover:opacity-100 sm:hover:shadow-sm sm:delay-100 duration-300 hover:scale-105"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-4 h-4 sm:w-5 sm:h-5 stroke-neutral-100"
-          fill="none"
-          viewBox="0 0 24 24"
+          className="w-4 h-4 opacity-25 sm:w-5 sm:h-5 stroke-stone-300"
+          fill="currentColor"
+          viewBox="0 0 20 20"
           stroke="currentColor"
         >
           <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M14 5l7 7m0 0l-7 7m7-7H3"
+            fillRule="evenodd"
+            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+            clipRule="evenodd"
           />
         </svg>
       </button>
