@@ -28,6 +28,17 @@ function MyApp({ Component, pageProps }) {
     return () => media.removeEventListener("change", (e) => updateTarget(e));
   }, []);
 
+  // instgram browser window width fix
+  //State of Screen width
+  const [width, setWidth] = useState(window.innerWidth);
+
+  // Fix instagram window.innerwidth issue
+  useEffect(() => {
+    if (window.screen.width < window.innerWidth) {
+      setSmall(true);
+    }
+  }, []);
+
   // defining toast padding according to window width
   const paddingRight = small ? 0 : 50;
   const paddingLeft = small ? 0 : 0;
