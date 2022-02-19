@@ -143,7 +143,7 @@ export default function Feed() {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-4 h-4 opacity-25 sm:w-5 sm:h-5 stroke-stone-300 hover:opacity-100"
+          className="w-4 h-4 opacity-25 sm:w-5 sm:h-5 stroke-stone-300"
           fill="currentColor"
           viewBox="0 0 20 20"
           stroke="currentColor"
@@ -183,7 +183,7 @@ export default function Feed() {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-4 h-4 opacity-25 sm:w-5 sm:h-5 stroke-stone-300 hover:opacity-100"
+          className="w-4 h-4 opacity-25 sm:w-5 sm:h-5 stroke-stone-300"
           fill="currentColor"
           viewBox="0 0 20 20"
           stroke="currentColor"
