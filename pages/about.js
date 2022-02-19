@@ -51,7 +51,7 @@ export default function about() {
                   or a crisis, please reach out immediately:&nbsp;
                   <a
                     href="https://www.opencounseling.com/suicide-hotlines"
-                    className="underline text-neutral-200 hover:text-stone-900"
+                    className="underline text-stone-700 hover:text-stone-900"
                   >
                     view hotline information
                   </a>
