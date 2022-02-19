@@ -7,6 +7,10 @@ import { AnimatePresence } from "framer-motion";
 function MyApp({ Component, pageProps }) {
   // checks for window width and sets state accordingly for toast position
   const [small, setSmall] = useState(false);
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    screenWidth: undefined,
+  });
 
   const updateTarget = useCallback((e) => {
     if (e.matches) {
@@ -28,33 +32,27 @@ function MyApp({ Component, pageProps }) {
     return () => media.removeEventListener("change", (e) => updateTarget(e));
   }, []);
 
-  // instgram browser window width fix
-  //State of Screen width
-  const [width, setWidth] = useState(window.innerWidth);
-
-  // Screen width pixels for tablets
-  const tabletBreakpoint = 767;
-
-  // When screen is resized
-  useEffect(() => {
-    const handleWindowResize = () => setWidth(window.innerWidth);
-    window.addEventListener("resize", handleWindowResize);
-    // Return a function from the effect that removes the event listener
-    return () => window.removeEventListener("resize", handleWindowResize);
-  }, []);
-
-  // Fix instagram window.innerwidth issue
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (window.screen.width < window.innerWidth) {
-        setWidth(window.screen.width);
-      }
-    }
-  }, []);
-
   // defining toast padding according to window width
   const paddingRight = small ? 0 : 50;
   const paddingLeft = small ? 0 : 0;
+
+  // instagram width fix
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Handler to call on window resize
+      function handleResize() {
+        // Set window width/height to state
+        setWindowSize({
+          width: window.innerWidth,
+          screenWidth: window.screen.width,
+        });
+      }
+    }
+
+    if (windowSize.width > windowSize.screenWidth) {
+      setSmall(true);
+    }
+  }, []);
 
   // on mount, framer motion SSR fix
   const [isLoaded, setLoaded] = useState(false);
