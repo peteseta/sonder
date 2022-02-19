@@ -89,17 +89,17 @@ function Input() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           rows="5"
-          placeholder="what's on your mind?"
+          placeholder="what are you thinking?"
           className="px-4 py-4 rounded-lg bg-transparent border-2 border-stone-300 outline-none text-stone-800 sm:text-2xl antialiased placeholder-stone-500 w-full min-h-[50px] overflow-auto"
         />
 
         <button
           type="submit"
           value="submit"
-          className="px-4 py-3 text-sm antialiased font-bold duration-300 ease-in-out bg-transparent border-2 rounded-lg shadow-sm border-stone-300 text-stone-800 sm:text-xl disabled:opacity-50 disabled:hover:scale-100 disabled:shadow-none disabled:font-normal sm:delay-100 hover:scale-105 active:underline hover:shadow-lg"
+          className="px-4 py-3 text-sm antialiased font-bold duration-300 ease-in-out bg-transparent border-2 rounded-lg shadow-sm border-stone-300 text-stone-800 sm:text-xl disabled:opacity-20 disabled:hover:scale-100 disabled:shadow-none disabled:font-normal sm:delay-100 hover:scale-105 active:underline hover:shadow-lg"
           disabled={!input.trim()}
         >
-          get it off my mind.
+          get if off my mind.
         </button>
       </div>
     </form>
