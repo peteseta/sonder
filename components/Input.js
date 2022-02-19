@@ -74,7 +74,7 @@ function Input() {
   return (
     // using a form - button is type=submit so it calls postScream once clicked.
     <form onSubmit={handleSubmit}>
-      <div className="flex-col px-6 pb-6 space-y-2 min-w-fit sm:px-14">
+      <div className="flex-col px-4 pb-6 space-y-2 min-w-fit sm:px-14">
         <textarea
           type="text"
           id="input"
@@ -82,7 +82,7 @@ function Input() {
           onChange={(e) => setInput(e.target.value)}
           rows="5"
           placeholder="what's on your mind?"
-          className="px-5 py-4 rounded-lg bg-transparent border-2 bg-black border-neutral-900 outline-none text-white sm:text-2xl antialiased placeholder-neutral-500 w-full min-h-[50px] overflow-auto"
+          className="px-4 py-3 rounded-lg bg-transparent border-2 bg-black border-neutral-900 outline-none text-white sm:text-2xl antialiased placeholder-neutral-500 w-full min-h-[50px] overflow-auto"
         />
 
         <button
