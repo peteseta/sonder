@@ -7,13 +7,6 @@ import { AnimatePresence } from "framer-motion";
 function MyApp({ Component, pageProps }) {
   // checks for window width and sets state accordingly for toast position
   const [small, setSmall] = useState(false);
-  const [instagramSmall, setInstagramSmall] = useState(false);
-  const [isItActuallySmall, setIsItActuallySmall] = useState(false);
-
-  const [windowSize, setWindowSize] = useState({
-    width: undefined,
-    screenWidth: undefined,
-  });
 
   const updateTarget = useCallback((e) => {
     if (e.matches) {
@@ -37,33 +30,9 @@ function MyApp({ Component, pageProps }) {
     return () => media.removeEventListener("change", (e) => updateTarget(e));
   }, []);
 
-  // instagram width fix
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      // Handler to call on window resize
-      function handleResize() {
-        // Set window width/height to state
-        setWindowSize({
-          width: window.innerWidth,
-          screenWidth: window.screen.width,
-        });
-      }
-    }
-
-    if (windowSize.width > windowSize.screenWidth) {
-      setInstagramSmall(true);
-    }
-
-    if (small !== instagramSmall) {
-      setIsItActuallySmall(true);
-    } else {
-      setIsItActuallySmall(small);
-    }
-  }, []);
-
   // defining toast padding according to window width
-  const paddingRight = isItActuallySmall ? 0 : 0;
-  const paddingLeft = isItActuallySmall ? 0 : 0;
+  const paddingRight = small ? 0 : 50;
+  const paddingLeft = small ? 0 : 0;
 
   // on mount, framer motion SSR fix
   const [isLoaded, setLoaded] = useState(false);
