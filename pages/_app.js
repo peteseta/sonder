@@ -7,6 +7,9 @@ import { AnimatePresence } from "framer-motion";
 function MyApp({ Component, pageProps }) {
   // checks for window width and sets state accordingly for toast position
   const [small, setSmall] = useState(false);
+  const [instagramSmall, setInstagramSmall] = useState(false);
+  const [isItActuallySmall, setIsItActuallySmall] = useState(false);
+
   const [windowSize, setWindowSize] = useState({
     width: undefined,
     screenWidth: undefined,
@@ -23,6 +26,8 @@ function MyApp({ Component, pageProps }) {
   // on mount, check window width
   useEffect(() => {
     const media = window.matchMedia(`(max-width: 640px)`);
+
+    // set event listener
     media.addEventListener("change", (e) => updateTarget(e));
 
     if (media.matches) {
@@ -31,10 +36,6 @@ function MyApp({ Component, pageProps }) {
 
     return () => media.removeEventListener("change", (e) => updateTarget(e));
   }, []);
-
-  // defining toast padding according to window width
-  const paddingRight = small ? 0 : 50;
-  const paddingLeft = small ? 0 : 0;
 
   // instagram width fix
   useEffect(() => {
@@ -50,9 +51,19 @@ function MyApp({ Component, pageProps }) {
     }
 
     if (windowSize.width > windowSize.screenWidth) {
-      setSmall(true);
+      setInstagramSmall(true);
+    }
+
+    if (small !== instagramSmall) {
+      setIsItActuallySmall(true);
+    } else {
+      setIsItActuallySmall(small);
     }
   }, []);
+
+  // defining toast padding according to window width
+  const paddingRight = isItActuallySmall ? 0 : 50;
+  const paddingLeft = isItActuallySmall ? 0 : 0;
 
   // on mount, framer motion SSR fix
   const [isLoaded, setLoaded] = useState(false);
