@@ -139,7 +139,7 @@ export default function Feed() {
       <button
         id="btnPrevious"
         onClick={previousScream}
-        className="sticky top-6 max-h-11 sm:max-h-16 basis-[2.5%] sm:basis-[5%] p-2 sm:p-5 border-2 rounded-lg border-stone-300 opacity-75 hover:opacity-100 sm:hover:shadow-sm sm:delay-100 duration-300 hover:scale-105"
+        className="sticky top-6 max-h-11 sm:max-h-16 basis-[2.5%] sm:basis-[5%] p-2 sm:p-5 border-2 rounded-lg border-stone-200 opacity-75 hover:opacity-100 sm:hover:shadow-sm sm:delay-100 duration-300 hover:scale-105"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -156,7 +156,7 @@ export default function Feed() {
         </svg>
       </button>
 
-      <div className="basis-[95%] sm:basis-[90%] p-4 border-2 rounded-lg border-stone-300 text-stone-800">
+      <div className="basis-[95%] sm:basis-[90%] p-4 border-2 rounded-lg border-stone-200 text-stone-800">
         <LazyMotion features={domAnimation}>
           <m.div
             initial={{ opacity: 0 }}
@@ -179,7 +179,7 @@ export default function Feed() {
       <button
         id="btnNext"
         onClick={nextScream}
-        className="sticky top-6 max-h-11 sm:max-h-16 basis-[2.5%] sm:basis-[5%] p-2 sm:p-5 border-2 rounded-lg border-stone-300 opacity-75 hover:opacity-100 sm:hover:shadow-sm sm:delay-100 duration-300 hover:scale-105"
+        className="sticky top-6 max-h-11 sm:max-h-16 basis-[2.5%] sm:basis-[5%] p-2 sm:p-5 border-2 rounded-lg border-stone-200 opacity-75 hover:opacity-100 sm:hover:shadow-sm sm:delay-100 duration-300 hover:scale-105"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

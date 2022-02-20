@@ -32,7 +32,7 @@ export default function about() {
                 <div class="flex-grow border-t border-stone-200"></div>
               </div>
 
-              <div className="p-4 text-sm border-2 rounded-lg border-stone-300 text-stone-900 sm:text-xl">
+              <div className="p-4 text-sm border-2 rounded-lg border-stone-200 text-stone-900 sm:text-xl">
                 <div className="text-xl font-bold sm:text-2xl text-stone-900">
                   important:
                 </div>
@@ -72,7 +72,7 @@ export default function about() {
                 <Disclosure>
                   {({ open }) => (
                     <>
-                      <div className="px-4 py-4 border-2 rounded-lg border-stone-300">
+                      <div className="px-4 py-4 border-2 rounded-lg border-stone-200">
                         <Disclosure.Button
                           className={
                             open
@@ -110,7 +110,7 @@ export default function about() {
                           leaveFrom="translate-y-0 opacity-100"
                           leaveTo="-translate-y-5 opacity-0"
                         >
-                          <Disclosure.Panel className="pt-2 text-sm sm:text-xl text-stone-900 border-stone-300">
+                          <Disclosure.Panel className="pt-2 text-sm sm:text-xl text-stone-900 border-stone-200">
                             sonder is an anonymous, safe, and inclusive place
                             for you to speak your mind.
                           </Disclosure.Panel>
@@ -122,7 +122,7 @@ export default function about() {
                 <Disclosure>
                   {({ open }) => (
                     <>
-                      <div className="px-4 py-4 border-2 rounded-lg border-stone-300">
+                      <div className="px-4 py-4 border-2 rounded-lg border-stone-200">
                         <Disclosure.Button
                           className={
                             open
@@ -160,7 +160,7 @@ export default function about() {
                           leaveFrom="translate-y-0 opacity-100"
                           leaveTo="-translate-y-5 opacity-0"
                         >
-                          <Disclosure.Panel className="pt-2 text-sm sm:text-xl text-stone-900 border-stone-300">
+                          <Disclosure.Panel className="pt-2 text-sm sm:text-xl text-stone-900 border-stone-200">
                             on sonder, you share thoughts— a few words, a
                             sentence or two, or when you need it, a few
                             paragraphs. it can be about anything; a part of your
@@ -175,7 +175,7 @@ export default function about() {
                 <Disclosure>
                   {({ open }) => (
                     <>
-                      <div className="px-4 py-4 border-2 rounded-lg border-stone-300">
+                      <div className="px-4 py-4 border-2 rounded-lg border-stone-200">
                         <Disclosure.Button
                           className={
                             open
@@ -213,7 +213,7 @@ export default function about() {
                           leaveFrom="translate-y-0 opacity-100"
                           leaveTo="-translate-y-5 opacity-0"
                         >
-                          <Disclosure.Panel className="pt-2 text-sm sm:text-xl text-stone-900 border-stone-300">
+                          <Disclosure.Panel className="pt-2 text-sm sm:text-xl text-stone-900 border-stone-200">
                             you don't have to login or register in any way to
                             use sonder. we don't know who you are, nor do we
                             collect or store that information.
