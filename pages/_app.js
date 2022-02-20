@@ -62,7 +62,7 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   // defining toast padding according to window width
-  const paddingRight = isItActuallySmall ? 0 : 50;
+  const paddingRight = isItActuallySmall ? 0 : 0;
   const paddingLeft = isItActuallySmall ? 0 : 0;
 
   // on mount, framer motion SSR fix
