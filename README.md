@@ -10,10 +10,6 @@ it can be about anything; a part of your day, some encouraging words for a stran
 
 sonder is anonymous— you don't have to login or register in any way to use sonder. we don't know who you are, nor do we collect or store that information.
 
-## Demo
-
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Tj5l8-4hS9I/0.jpg)](https://www.youtube.com/watch?v=Tj5l8-4hS9I)
-
 ## Technical
 
 **tech stack** | _the FERN stack_
@@ -58,3 +54,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Demo
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Tj5l8-4hS9I/0.jpg)](https://www.youtube.com/watch?v=Tj5l8-4hS9I)
