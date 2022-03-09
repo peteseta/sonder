@@ -2,7 +2,7 @@
 
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg) ![Vercel](https://vercelbadge.vercel.app/api/peteseta/sonder)
 
-**sonder is an anonymous, safe, and inclusive place for you to speak your mind.**
+> **sonder is an anonymous, safe, and inclusive place for you to speak your mind.**
 
 on sonder, you share thoughts— a few words, a sentence or two, or when you need it, a few paragraphs.
 
