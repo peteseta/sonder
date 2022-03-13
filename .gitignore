@@ -32,15 +32,3 @@ yarn-error.log*
 
 # vercel
 .vercel
-
-#trunk
-.trunk
-.trunk/.gitignore
-.trunk/trunk.yaml
-.markdownlint.yaml
-
-#ide
-.vscode
-.vscode/
-.vscode/launch.json
-.vscode/settings.json
