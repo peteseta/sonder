@@ -6,7 +6,7 @@ export default function Navbar() {
 
   return (
     <nav className="px-6 pt-4 pb-4 -space-y-2 bg-white sm:px-14 sm:pb-10 sm:pt-6">
-      <div className="text-6xl antialiased font-bold tracking-tight text-transparent -translate-x-1 bg-clip-text bg-gradient-to-r from-indigo-500 via-pink-400 to-pink-500 sm:text-8xl">
+      <div className="text-6xl antialiased font-bold tracking-tight text-transparent -translate-x-1 max-w-fit bg-clip-text bg-gradient-to-r from-indigo-500 via-pink-400 to-pink-500 sm:text-8xl">
         {/* <TypeIt
           options={{
             strings: ["sonder."],
